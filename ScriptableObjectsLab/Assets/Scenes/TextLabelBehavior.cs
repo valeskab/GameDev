@@ -7,7 +7,7 @@ public class TextLabelBehavior : MonoBehaviour
     public Text label;
     public FloatData dataObj;
 
-    private void start()
+    private void Start()
     {
         label = GetComponent<Text>();
         label.text = dataObj.value.ToString(CultureInfo.InvariantCulture);
