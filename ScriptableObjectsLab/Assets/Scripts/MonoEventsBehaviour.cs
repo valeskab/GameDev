@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class MonoEventsBehaviour : MonoBehaviour
 {
     public UnityEvent startEvent, awakeEvent, disableEvent;
-    private void Awake()
+    private void Awake() //Awake runs first
     {
         awakeEvent.Invoke();
     }
