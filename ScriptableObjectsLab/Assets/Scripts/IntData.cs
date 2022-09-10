@@ -15,6 +15,11 @@ public class IntData : ScriptableObject
         value = number;
     }
 
+    public void SetValue(int number)
+    {
+        value = number;
+    }
+
     public void DisplayImage(Image img)
     {
         img.fillAmount = value;
@@ -24,4 +29,5 @@ public class IntData : ScriptableObject
     {
         text.text = value.ToString();
     }
+    
 }
