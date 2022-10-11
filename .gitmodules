@@ -1,3 +1,6 @@
 [submodule "GameDev2022/Assets/Tools"]
 	path = GameDev2022/Assets/Tools
 	url = https://github.com/valeskab/Tools
+[submodule "MyProjectVBM2D/Assets/Tools"]
+	path = MyProjectVBM2D/Assets/Tools
+	url = https://github.com/valeskab/Tools
