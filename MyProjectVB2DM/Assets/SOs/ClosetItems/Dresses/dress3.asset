@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd4fb652f3ece9245b7f892ed7755db9, type: 3}
-  m_Name: CasualJewels
+  m_Script: {fileID: 11500000, guid: 62716bcdb2ad9a34f968990e88274aac, type: 3}
+  m_Name: dress3
   m_EditorClassIdentifier: 
-  artwork: {fileID: -2413806693520163455, guid: 87db2ff6e2ed8554b987147794b0f072, type: 3}
+  dress: {fileID: 4586140976406088163, guid: 1a2db63394ef0e544bea552926175f5c, type: 3}
