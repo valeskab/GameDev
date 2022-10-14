@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+[CreateAssetMenu]
 
-public class CharacterCreatorSO : MonoBehaviour
+public class CharacterCreatorSO : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject accesory;
+    public GameObject hairstyle;
+    public GameObject shirt;
+    public GameObject pants;
+    public GameObject dress;
+    public GameObject shoes;
 }
