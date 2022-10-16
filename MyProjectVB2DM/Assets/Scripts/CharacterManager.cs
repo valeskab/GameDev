@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class CharacterManager : MonoBehaviour
 {
-    public CharacterCreatorSO dressobj;
+    public CharacterCreatorSO soObj;
 
     public SpriteRenderer artworkSprite;
 
@@ -16,7 +16,7 @@ public class CharacterManager : MonoBehaviour
     public void NextOption()
     {
         selectedOption++;
-        if (selectedOption >= dressobj.DressCount)
+        if (selectedOption >= soObj.DressCount)
         {
             selectedOption = 0;
         }
@@ -29,7 +29,7 @@ public class CharacterManager : MonoBehaviour
         selectedOption--;
         if (selectedOption < 0)
         {
-            selectedOption = dressobj.DressCount -1;
+            selectedOption = soObj.DressCount -1;
         }
         
         UpdateDress(selectedOption);
@@ -37,7 +37,7 @@ public class CharacterManager : MonoBehaviour
 
     private void UpdateDress(int selectedOption)
     {
-        ClosetDatabase dress = dressobj.GetDress(selectedOption);
-        artworkSprite.sprite = dress.characterDress;
+        ClosetDatabase dress = soObj.GetDress(selectedOption);
+        artworkSprite.sprite = dress.itemSprite;
     }
 }
