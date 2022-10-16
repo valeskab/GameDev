@@ -3,10 +3,18 @@ using UnityEngine;
 
 public class CharacterCreatorSO : ScriptableObject
 {
-    public GameObject accesory;
-    public GameObject hairstyle;
-    public GameObject shirt;
-    public GameObject pants;
-    public GameObject dress;
-    public GameObject shoes;
+    public ClosetDatabase[] dress;
+
+    public int DressCount
+    {
+        get
+        {
+            return dress.Length;
+        }
+    }
+
+    public ClosetDatabase GetDress(int index)
+    {
+        return dress[index];
+    }
 }
