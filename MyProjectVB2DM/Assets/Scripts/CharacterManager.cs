@@ -10,18 +10,18 @@ public class CharacterManager : MonoBehaviour
     private int selectedOption = 0;
     void Start()
     {
-        UpdateDress(selectedOption);
+        UpdateItem(selectedOption);
     }
 
     public void NextOption()
     {
         selectedOption++;
-        if (selectedOption >= soObj.DressCount)
+        if (selectedOption >= soObj.ItemCount)
         {
             selectedOption = 0;
         }
         
-        UpdateDress(selectedOption);
+        UpdateItem(selectedOption);
     }
 
     public void BackOption()
@@ -29,15 +29,15 @@ public class CharacterManager : MonoBehaviour
         selectedOption--;
         if (selectedOption < 0)
         {
-            selectedOption = soObj.DressCount -1;
+            selectedOption = soObj.ItemCount -1;
         }
         
-        UpdateDress(selectedOption);
+        UpdateItem(selectedOption);
     }
 
-    private void UpdateDress(int selectedOption)
+    private void UpdateItem(int selectedOption)
     {
-        ClosetDatabase dress = soObj.GetDress(selectedOption);
+        ClosetDatabase dress = soObj.GetItem(selectedOption);
         artworkSprite.sprite = dress.itemSprite;
     }
 }

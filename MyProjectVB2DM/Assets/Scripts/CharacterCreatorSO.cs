@@ -5,7 +5,7 @@ public class CharacterCreatorSO : ScriptableObject
 {
     public ClosetDatabase[] dress;
 
-    public int DressCount
+    public int ItemCount
     {
         get
         {
@@ -13,7 +13,7 @@ public class CharacterCreatorSO : ScriptableObject
         }
     }
 
-    public ClosetDatabase GetDress(int index)
+    public ClosetDatabase GetItem(int index)
     {
         return dress[index];
     }
