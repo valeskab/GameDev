@@ -3,18 +3,18 @@ using UnityEngine;
 
 public class CharacterCreatorSO : ScriptableObject
 {
-    public ClosetDatabase[] dress;
+    public ClosetDatabase[] item;
 
     public int ItemCount
     {
         get
         {
-            return dress.Length;
+            return item.Length;
         }
     }
 
     public ClosetDatabase GetItem(int index)
     {
-        return dress[index];
+        return item[index];
     }
 }

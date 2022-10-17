@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c693b80e09b4d5e47b7052d66706f249, type: 3}
   m_Name: Dress
   m_EditorClassIdentifier: 
-  dress:
+  item:
   - itemSprite: {fileID: 0}
   - itemSprite: {fileID: 21300000, guid: 537fc3aa7ce099844851d9bc172819b1, type: 3}
   - itemSprite: {fileID: 21300000, guid: 42c19119c64b67942a0b2ad08eb660b2, type: 3}

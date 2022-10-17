@@ -834,7 +834,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1792271422}
+      - m_Target: {fileID: 1792271425}
         m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
         m_MethodName: BackOption
         m_Mode: 1
@@ -1261,7 +1261,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 837798382}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1792271425}
+        m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
+        m_MethodName: Randomize
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 641837014}
+        m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
+        m_MethodName: Randomize
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &837798382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1834,6 +1858,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293026291}
   m_CullTransparentMesh: 1
+--- !u!1 &1334460175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2168952181439651528, guid: da15caeba0e41c94b905c79f802b32d0, type: 3}
+  m_PrefabInstance: {fileID: 2168952179993819892}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1749015431
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,17 +2213,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790359096}
   m_CullTransparentMesh: 1
---- !u!114 &1792271422 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2168952181439651530, guid: da15caeba0e41c94b905c79f802b32d0, type: 3}
+--- !u!212 &1792271424 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2168952181439651529, guid: da15caeba0e41c94b905c79f802b32d0, type: 3}
   m_PrefabInstance: {fileID: 2168952179993819892}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &1792271425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334460175}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9560c59a8b3aa24d840a36ea4e65609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soObj: {fileID: 11400000, guid: bd37fdf7f81a21b4781f6d877bb955bb, type: 2}
+  artworkSprite: {fileID: 1792271424}
 --- !u!1 &1820494012
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,7 +2316,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1792271422}
+      - m_Target: {fileID: 1792271425}
         m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
         m_MethodName: NextOption
         m_Mode: 1
@@ -2807,5 +2844,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2168952181439651530, guid: da15caeba0e41c94b905c79f802b32d0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: da15caeba0e41c94b905c79f802b32d0, type: 3}

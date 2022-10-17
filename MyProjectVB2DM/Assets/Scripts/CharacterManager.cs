@@ -37,7 +37,13 @@ public class CharacterManager : MonoBehaviour
 
     private void UpdateItem(int selectedOption)
     {
-        ClosetDatabase dress = soObj.GetItem(selectedOption);
-        artworkSprite.sprite = dress.itemSprite;
+        ClosetDatabase item = soObj.GetItem(selectedOption);
+        artworkSprite.sprite = item.itemSprite;
+    }
+
+    public void Randomize()
+    {
+        selectedOption = Random.Range(0, soObj.ItemCount - 1);
+        UpdateItem(selectedOption);
     }
 }
