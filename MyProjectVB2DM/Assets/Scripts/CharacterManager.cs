@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class CharacterManager : MonoBehaviour
 {
+    //Script Reference provided by Hooson on youtube https://www.youtube.com/watch?v=2PKBChN10us
     public CharacterCreatorSO soObj;
 
     public SpriteRenderer artworkSprite;
