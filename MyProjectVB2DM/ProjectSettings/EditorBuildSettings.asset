@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 05cd927db69fd674ebcba4b3f4c67758
+  - enabled: 1
+    path: Assets/Scenes/DreamyClosetMobile.unity
+    guid: bd24e3a8e2c951f478a539b0437346bf
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f7a1366cf7ec16843bad06b6567edc3d, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 57abdf7d47dbea84e8dd7a9164984bbf, type: 2}
