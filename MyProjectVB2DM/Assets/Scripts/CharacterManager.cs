@@ -56,6 +56,7 @@ public class CharacterManager : MonoBehaviour
     {
         selectedOption = Random.Range(0, soObj.ItemCount - 1);
         UpdateItem(selectedOption);
+        Save();
     }
 
     private void Load()
