@@ -11,6 +11,14 @@ public class CharacterManager : MonoBehaviour
     private int selectedOption = 0;
     void Start()
     {
+        if (!PlayerPrefs.HasKey("selectedOption"))
+        {
+            selectedOption = 0;
+        }
+        else
+        {
+            Load();
+        }
         UpdateItem(selectedOption);
     }
 
@@ -23,6 +31,7 @@ public class CharacterManager : MonoBehaviour
         }
         
         UpdateItem(selectedOption);
+        Save();
     }
 
     public void BackOption()
@@ -34,6 +43,7 @@ public class CharacterManager : MonoBehaviour
         }
         
         UpdateItem(selectedOption);
+        Save();
     }
 
     private void UpdateItem(int selectedOption)
@@ -46,5 +56,15 @@ public class CharacterManager : MonoBehaviour
     {
         selectedOption = Random.Range(0, soObj.ItemCount - 1);
         UpdateItem(selectedOption);
+    }
+
+    private void Load()
+    {
+        selectedOption = PlayerPrefs.GetInt("selectedOption");
+    }
+
+    private void Save()
+    {
+        PlayerPrefs.SetInt("selectedOption", selectedOption);
     }
 }

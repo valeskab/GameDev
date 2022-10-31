@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2168952181439651531}
   - component: {fileID: 2168952181439651529}
-  - component: {fileID: 2168952181439651530}
   m_Layer: 0
   m_Name: Selected Dress
   m_TagString: Untagged
@@ -85,17 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2168952181439651530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2168952181439651528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9560c59a8b3aa24d840a36ea4e65609, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dressobj: {fileID: 11400000, guid: bd37fdf7f81a21b4781f6d877bb955bb, type: 2}
-  artworkSprite: {fileID: 2168952181439651529}
