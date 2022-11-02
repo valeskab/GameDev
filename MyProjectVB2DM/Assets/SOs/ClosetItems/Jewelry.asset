@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Jewelry
   m_EditorClassIdentifier: 
   item:
-  - itemSprite: {fileID: 0}
   - itemSprite: {fileID: 21300000, guid: 822e484701b155a4bb49529f98fc2015, type: 3}
   - itemSprite: {fileID: 21300000, guid: 722e0270f3a62dc48a0a79078109327b, type: 3}
   - itemSprite: {fileID: 21300000, guid: 690e4f7da37e76f44ae93c845fa8e02d, type: 3}
+  - itemSprite: {fileID: 0}
