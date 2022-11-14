@@ -8,8 +8,12 @@ public class MainMenuBehaviour : MonoBehaviour
 {
     public int sceneToLoad;
 
-    public void StartGame()
+    public void StartDressGame()
     {
         SceneManager.LoadScene(sceneToLoad);
+    }
+    public void StartMiniGame()
+    {
+        SceneManager.LoadScene(sceneToLoad + 1);
     }
 }
