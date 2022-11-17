@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
-public class TriggerEventBehavior : MonoBehaviour
+public class TriggerEventBehaviour : MonoBehaviour
 
 {
     public UnityEvent triggerEnterEvent;

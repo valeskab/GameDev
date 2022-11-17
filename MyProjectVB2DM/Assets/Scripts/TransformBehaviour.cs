@@ -1,18 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TransformBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public UnityEvent onEnableEvent;
+    public Vector3Data location;
+    public float holdTime = 3f;
+    private WaitForSeconds waitForSecondsObj;
+
+    private void Awake()
     {
-        
+        waitForSecondsObj = new WaitForSeconds(holdTime);
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator Start()
     {
-        
+        yield return waitForSecondsObj;
+        gameObject.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        onEnableEvent.Invoke();
+        StartCoroutine(Start());
+    }
+
+    public void UpdatePosition()
+    {
+        transform.position = location.value;
     }
 }
