@@ -559,7 +559,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -500}
+  m_AnchoredPosition: {x: 0, y: -443}
   m_SizeDelta: {x: 180.4282, y: 66.8795}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &240911599
@@ -853,8 +853,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295246191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.37, z: 1}
+  m_LocalPosition: {x: 0.0174, y: 0, z: 0}
+  m_LocalScale: {x: 1.0671475, y: 0.37, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1053,7 +1053,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mini-Game
+  m_text: Start Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac649979ce2afcb4396599e337d193d4, type: 2}
   m_sharedMaterial: {fileID: 4362804883878073605, guid: ac649979ce2afcb4396599e337d193d4, type: 2}
@@ -1421,7 +1421,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dress-up
+  m_text: Boutique
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac649979ce2afcb4396599e337d193d4, type: 2}
   m_sharedMaterial: {fileID: 4362804883878073605, guid: ac649979ce2afcb4396599e337d193d4, type: 2}
@@ -1536,7 +1536,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -362}
+  m_AnchoredPosition: {x: 0, y: -238}
   m_SizeDelta: {x: 180.4282, y: 66.8795}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &783180159
@@ -2227,7 +2227,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000019073, y: 254}
+  m_AnchoredPosition: {x: 0.0000019073, y: 188}
   m_SizeDelta: {x: 230.7, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1621206338
