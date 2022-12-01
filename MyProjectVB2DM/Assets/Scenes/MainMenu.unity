@@ -2252,7 +2252,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Dreamy
 
-    Boutique'
+    Dash'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac649979ce2afcb4396599e337d193d4, type: 2}
   m_sharedMaterial: {fileID: 4362804883878073605, guid: ac649979ce2afcb4396599e337d193d4, type: 2}
