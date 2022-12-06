@@ -7,7 +7,7 @@ public class PlayerControllerBehaviour : MonoBehaviour
 {
     [Header("PlayerStats")]
     public float jumpHeight = 8f;
-    private Rigidbody2D rb;
+    private Rigidbody rb;
     
     [Header("GroundCheck")]
     private bool isGrounded;
@@ -22,18 +22,24 @@ public class PlayerControllerBehaviour : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
         source = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround); 
-        if(Input.GetKeyDown(KeyCode.Space)&& isGrounded)
+        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround); 
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
-            source.PlayOneShot(marker, 1.0f);
+            Jump();
         }
+    }
+    
+    
+    public void Jump()
+    {
+        rb.velocity = new Vector3(rb.velocity.x, jumpHeight);
+        source.PlayOneShot(marker, 1.0f);
     }
     
 }
