@@ -31,15 +31,9 @@ public class PlayerControllerBehaviour : MonoBehaviour
         //isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround); 
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Jump();
+            rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+            source.PlayOneShot(marker, 1.0f);
         }
-    }
-    
-    
-    public void Jump()
-    {
-        rb.velocity = new Vector3(rb.velocity.x, jumpHeight);
-        source.PlayOneShot(marker, 1.0f);
     }
     
 }

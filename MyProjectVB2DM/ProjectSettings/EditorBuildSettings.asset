@@ -17,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DreamyDash.unity
     guid: 36ddb33f43e3e8c45b6fd2d13452228e
-  - enabled: 1
-    path: Assets/Scenes/Done!.unity
-    guid: 2762854a4007c854b90b1fbd6049d6d4
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f7a1366cf7ec16843bad06b6567edc3d, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 57abdf7d47dbea84e8dd7a9164984bbf, type: 2}
