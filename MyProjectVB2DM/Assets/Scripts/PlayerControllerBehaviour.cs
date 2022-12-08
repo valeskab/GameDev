@@ -13,12 +13,11 @@ public class PlayerControllerBehaviour : MonoBehaviour
     private Rigidbody rb;
     
     [Header("GroundCheck")]
-    private bool isGrounded;
-    public Transform groundCheck;
-    public float groundCheckRadius;
-    public LayerMask whatIsGround;
+
+    private float verticalPos;
     [SerializeField]private float moveVelocity;
     [SerializeField]private float gravity = 10f;
+    
     
     
     public AudioClip marker;
@@ -31,25 +30,24 @@ public class PlayerControllerBehaviour : MonoBehaviour
 
     private void Update()
     {
-        Jump();
+        CalculateVerticalPos();
         PlayerMovement();
-        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround); 
     }
 
     private void PlayerMovement()
     {
-        Vector3 newPos = new Vector3(moveVelocity, jumpHeight, 0f);
+        Vector3 newPos = new Vector3(moveVelocity, verticalPos, 0f);
         characterController.Move(newPos * Time.deltaTime);
     }
 
-    private void Jump()
+    private void CalculateVerticalPos()
     {
         if(characterController.isGrounded)
         {
-            jumpHeight = 0f;
+            verticalPos = 0f;
         }
 
-        jumpHeight -= gravity * Time.deltaTime;
+        verticalPos -= gravity * Time.deltaTime;
     }
     
 }
