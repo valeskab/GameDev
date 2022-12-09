@@ -24,6 +24,7 @@ public class PlayerControllerBehaviour : MonoBehaviour
     [SerializeField]private float gravity = 20f;
 
     private DirectionInput directionInput;
+    private Coroutine coroutineSlide;
 
     private float controllerRadius;
     private float controllerHeight;
@@ -72,8 +73,37 @@ public class PlayerControllerBehaviour : MonoBehaviour
             {
                 verticalPos = jumpHeight;
                 IsJumping = true;
+                if (coroutineSlide != null)
+                {
+                    StopCoroutine(coroutineSlide);
+                    IsSliding = false;
+                    ModifyColliderSlide(false);
+                }
+            }
+
+            if (directionInput == DirectionInput.Slide)
+            {
+                if (IsSliding)
+                {
+                    return;
+                }
+
+                if (coroutineSlide != null)
+                {
+                    StopCoroutine(coroutineSlide);
+                }
+                SlideCharacter();
             }
         }
+        else
+        {
+            if (directionInput == DirectionInput.Slide)
+            {
+                verticalPos -= jumpHeight;
+                SlideCharacter();
+            }
+        }
+        
 
         verticalPos -= gravity * Time.deltaTime;
     }
@@ -92,6 +122,20 @@ public class PlayerControllerBehaviour : MonoBehaviour
             characterController.height = controllerHeight;
             characterController.center = new Vector3(0f, controllerPosY, 0f);
         }
+    }
+
+    private void SlideCharacter()
+    {
+        coroutineSlide = StartCoroutine(SlideCharacterCO());
+    }
+
+    private IEnumerator SlideCharacterCO()
+    {
+        IsSliding = true;
+        ModifyColliderSlide(true);
+        yield return new WaitForSeconds(2f);
+        IsSliding = false;
+        ModifyColliderSlide(false);
     }
 
     private void InputDetection()
