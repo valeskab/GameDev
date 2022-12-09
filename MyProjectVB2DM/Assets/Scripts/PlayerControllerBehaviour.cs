@@ -2,23 +2,36 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+public enum DirectionInput
+{
+    Null,
+    Jump,
+    Slide
+}
 public class PlayerControllerBehaviour : MonoBehaviour
 {
 
     private CharacterController characterController;
 
     [Header("PlayerStats")]
-    public float jumpHeight = 8f;
     private Rigidbody rb;
     
     [Header("GroundCheck")]
 
     private float verticalPos;
     [SerializeField]private float moveVelocity;
-    [SerializeField]private float gravity = 10f;
-    
-    
+    private float jumpHeight = 14.5f;
+    [SerializeField]private float gravity = 20f;
+
+    private DirectionInput directionInput;
+
+    private float controllerRadius;
+    private float controllerHeight;
+    private float controllerPosY;
+
+    public bool IsJumping { get; private set; }
+
+    public bool IsSliding { get; private set; }
     
     public AudioClip marker;
     private AudioSource source;
@@ -28,8 +41,16 @@ public class PlayerControllerBehaviour : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
+    private void Start()
+    {
+        controllerRadius = characterController.radius;
+        controllerHeight = characterController.height;
+        controllerPosY = characterController.center.y;
+    }
+
     private void Update()
     {
+        InputDetection();
         CalculateVerticalPos();
         PlayerMovement();
     }
@@ -44,10 +65,47 @@ public class PlayerControllerBehaviour : MonoBehaviour
     {
         if(characterController.isGrounded)
         {
+            IsJumping = false;
             verticalPos = 0f;
+
+            if (directionInput == DirectionInput.Jump)
+            {
+                verticalPos = jumpHeight;
+                IsJumping = true;
+            }
         }
 
         verticalPos -= gravity * Time.deltaTime;
+    }
+
+    private void ModifyColliderSlide(bool modify)
+    {
+        if (modify)
+        {
+            characterController.radius = 0.55f;
+            characterController.height = 1.99f;
+            characterController.center = new Vector3(0f, -1.79f, 0f);
+        }
+        else
+        {
+            characterController.radius = controllerRadius;
+            characterController.height = controllerHeight;
+            characterController.center = new Vector3(0f, controllerPosY, 0f);
+        }
+    }
+
+    private void InputDetection()
+    {
+        directionInput = DirectionInput.Null;
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            directionInput = DirectionInput.Jump;
+        }
+
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            directionInput = DirectionInput.Slide;
+        }
     }
     
 }
