@@ -10,6 +10,7 @@ public enum DirectionInput
 }
 public class PlayerControllerBehaviour : MonoBehaviour
 {
+    [SerializeField] private GameManager gameManager;
 
     private CharacterController characterController;
 
@@ -54,6 +55,10 @@ public class PlayerControllerBehaviour : MonoBehaviour
 
     private void Update()
     {
+        if (gameManager.CurrentState == GameStates.Start || gameManager.CurrentState == GameStates.GameOver)
+        {
+            return;
+        }
         InputDetection();
         CalculateVerticalPos();
         PlayerMovement();
@@ -166,7 +171,12 @@ public class PlayerControllerBehaviour : MonoBehaviour
     {
         if (hit.collider.CompareTag("Obstacle"))
         {
+            if (gameManager.CurrentState == GameStates.GameOver)
+            {
+                return;
+            }
             playerAnims.ShowIdleAnim();
+            gameManager.ChangeState(GameStates.GameOver);
         }
     }
 }

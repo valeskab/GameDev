@@ -1,18 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum GameStates
+{
+    Start,
+    Playing,
+    GameOver
+}
+
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameStates CurrentState { get; set; }
+
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ChangeState(GameStates.Playing);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeState(GameStates newState)
     {
-        
+        if (CurrentState != newState)
+        {
+            CurrentState = newState;
+        }
     }
 }
