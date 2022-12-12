@@ -10,8 +10,10 @@ public enum GameStates
     GameOver
 }
 
-public class GameManager : MonoBehaviour
+public class GameManager : InstanceBehaviour<GameManager>
 {
+    
+    
     public GameStates CurrentState { get; set; }
 
     private void Update()
