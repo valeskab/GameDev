@@ -161,5 +161,12 @@ public class PlayerControllerBehaviour : MonoBehaviour
             directionInput = DirectionInput.Slide;
         }
     }
-    
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.collider.CompareTag("Obstacle"))
+        {
+            playerAnims.ShowIdleAnim();
+        }
+    }
 }
