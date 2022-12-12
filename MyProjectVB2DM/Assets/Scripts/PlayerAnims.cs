@@ -25,18 +25,18 @@ public class PlayerAnims : MonoBehaviour
 
     public void ShowIdleAnim()
     {
-        ChangeAnim("IdleBell");
+        ChangeAnim("Idle");
     }
     public void ShowRunAnim()
     {
-        ChangeAnim("runBelle");
+        ChangeAnim("Run");
     }
     public void ShowJumpAnim()
     {
-        ChangeAnim("jumpBelle");
+        ChangeAnim("Jump");
     }
-    public void ShowSlideAnim()
+    public void ShowCrouchAnim()
     {
-        ChangeAnim("slideBell");
+        ChangeAnim("Crouch");
     }
 }

@@ -13,6 +13,8 @@ public class PlayerControllerBehaviour : MonoBehaviour
 
     private CharacterController characterController;
 
+    private PlayerAnims playerAnims;
+
     [Header("PlayerStats")]
     private Rigidbody rb;
     
@@ -40,6 +42,7 @@ public class PlayerControllerBehaviour : MonoBehaviour
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
+        playerAnims = GetComponent<PlayerAnims>();
     }
 
     private void Start()
@@ -69,10 +72,16 @@ public class PlayerControllerBehaviour : MonoBehaviour
             IsJumping = false;
             verticalPos = 0f;
 
+            if (IsSliding == false && IsJumping == false)
+            {
+                 playerAnims.ShowRunAnim();
+            }
+
             if (directionInput == DirectionInput.Jump)
             {
                 verticalPos = jumpHeight;
                 IsJumping = true;
+                playerAnims.ShowJumpAnim();
                 if (coroutineSlide != null)
                 {
                     StopCoroutine(coroutineSlide);
@@ -132,6 +141,7 @@ public class PlayerControllerBehaviour : MonoBehaviour
     private IEnumerator SlideCharacterCO()
     {
         IsSliding = true;
+        playerAnims.ShowCrouchAnim();
         ModifyColliderSlide(true);
         yield return new WaitForSeconds(2f);
         IsSliding = false;
