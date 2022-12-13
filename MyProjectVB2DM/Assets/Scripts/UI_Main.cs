@@ -1,14 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Sequences;
+
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class UI_Main : MonoBehaviour
 {
-    [SerializeField] private GameObject menuTabStart;
-    [SerializeField] private GameObject menuTabGameOver;
+
+    private bool gamePaused;
     public void SwitchMenuTo(GameObject uiMenu)
     {
         for (int i = 0; i < transform.childCount; i++)
@@ -18,38 +15,18 @@ public class UI_Main : MonoBehaviour
 
         uiMenu.SetActive(true);
     }
-    public void GameOver()
-    {
-        menuTabGameOver.SetActive(true);
-        GameManager.Instance.ChangeState((GameStates.GameOver));
-    }
 
-    public void PlayStart()
+    public void PauseGame()
     {
-        menuTabStart.SetActive(false);
-        GameManager.Instance.ChangeState(GameStates.Playing);
-    }
-
-    public void Retry()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    private void ChangeStateReturn(GameStates newState)
-    {
-        if (newState == GameStates.GameOver)
+        if (gamePaused)
         {
-            GameOver();
+            Time.timeScale = 1;
+            gamePaused = false;
         }
-    }
-
-    private void OnEnable()
-    {
-        GameManager.GameStateEvent += ChangeStateReturn;
-    }
-
-    private void OnDisable()
-    {
-        GameManager.GameStateEvent -= ChangeStateReturn;
+        else
+        {
+            Time.timeScale = 0;
+            gamePaused = true;
+        }
     }
 }

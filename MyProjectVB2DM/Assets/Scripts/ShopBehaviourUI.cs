@@ -14,6 +14,7 @@ public class ShopBehaviourUI : MonoBehaviour
 {
     [SerializeField] private GameObject skinColorButton;
     [SerializeField] private Transform skinColorParent;
+    [SerializeField] public Image skinDisplay;
 
     [SerializeField] private ColorToSell[] skinColors;
 
@@ -33,6 +34,6 @@ public class ShopBehaviourUI : MonoBehaviour
 
     public void PurchaseColor(Color color)
     {
-        
+        skinDisplay.color = color;
     }
 }
