@@ -151,7 +151,7 @@ public class PlayerControllerBehaviour : MonoBehaviour
         ModifyColliderSlide(false);
     }
 
-    private void InputDetection()
+    public void InputDetection()
     {
         directionInput = DirectionInput.Null;
         if (Input.GetKeyDown(KeyCode.W))
