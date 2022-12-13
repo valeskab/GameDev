@@ -6,8 +6,6 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField] private Transform characterTransform;
-    [SerializeField] private float characterHeight;
-    [SerializeField] private float characterDistance;
 
     private Vector3 myCamPos;
     void Start()

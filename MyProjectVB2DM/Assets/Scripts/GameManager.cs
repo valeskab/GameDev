@@ -13,14 +13,14 @@ public enum GameStates
 public class GameManager : InstanceBehaviour<GameManager>
 {
     
-    
+    public static event Action<GameStates> GameStateEvent;
     public GameStates CurrentState { get; set; }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (CurrentState == GameStates.Start || CurrentState == GameStates.GameOver)
         {
-            ChangeState(GameStates.Playing);
+            return;
         }
     }
 
@@ -29,6 +29,9 @@ public class GameManager : InstanceBehaviour<GameManager>
         if (CurrentState != newState)
         {
             CurrentState = newState;
+            GameStateEvent?.Invoke(CurrentState);
         }
     }
+    
+    
 }
