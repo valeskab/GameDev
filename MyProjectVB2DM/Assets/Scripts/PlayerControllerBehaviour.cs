@@ -151,10 +151,10 @@ public class PlayerControllerBehaviour : MonoBehaviour
         ModifyColliderSlide(false);
     }
 
-    public void InputDetection()
+    private void InputDetection()
     {
         directionInput = DirectionInput.Null;
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetMouseButton(0))
         {
             directionInput = DirectionInput.Jump;
         }

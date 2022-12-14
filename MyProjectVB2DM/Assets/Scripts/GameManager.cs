@@ -12,7 +12,7 @@ public enum GameStates
 
 public class GameManager : InstanceBehaviour<GameManager>
 {
-    
+
     public static event Action<GameStates> GameStateEvent;
     public GameStates CurrentState { get; set; }
 
