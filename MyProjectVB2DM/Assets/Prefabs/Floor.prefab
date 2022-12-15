@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6146322984019514879}
   - component: {fileID: 6146322984019514877}
   - component: {fileID: 671653879}
+  - component: {fileID: 4844354397997556712}
   m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
@@ -115,3 +116,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &4844354397997556712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146322984019514872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7dcc66a30f4eeb4bb25515386d8dedf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileType: 0

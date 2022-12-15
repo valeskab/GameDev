@@ -11,4 +11,6 @@ public enum TileType
 public class TileBehaviour : MonoBehaviour
 {
     [SerializeField] private TileType tileType;
+    [SerializeField] private bool isFloating;
+    
 }
