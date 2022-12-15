@@ -84,6 +84,7 @@ public class PlayerControllerBehaviour : MonoBehaviour
             {
                 verticalPos = jumpHeight;
                 IsJumping = true;
+                FindObjectOfType<AudioManager>().Play("PlayerJump");
                 playerAnims.ShowJumpAnim();
                 if (coroutineSlide != null)
                 {

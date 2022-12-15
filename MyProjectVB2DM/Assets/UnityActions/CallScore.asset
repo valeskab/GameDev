@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0784cf8b2bc88b34f8d715f22a17f917, type: 3}
-  m_Name: NextPosition
+  m_Script: {fileID: 11500000, guid: 5fa98b436f50df145b888a42745c67c7, type: 3}
+  m_Name: CallScore
   m_EditorClassIdentifier: 
-  value: {x: 3, y: 0, z: 0}
